@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f1e8;
+  color: #171717;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolio {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+
+nav {
+  height: 80px;
+  padding: 0 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #171717;
+}
+
+nav h2 {
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  font-size: 14px;
+}
+
+.nav-links a {
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.5;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 90vh;
+  padding: 120px 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro,
+.section-label {
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(80px, 15vw, 210px);
+  line-height: 0.78;
+  letter-spacing: -9px;
+  font-weight: 700;
+  margin-left: -8px;
+}
+
+.hero h1 span {
+  color: #ff4d00;
+}
+
+.role {
+  margin-top: 55px;
+  font-size: 20px;
+}
+
+.hero button {
+  width: fit-content;
+  margin-top: 35px;
+  padding: 14px 22px;
+  border: 1px solid #171717;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #171717;
+  color: #f5f1e8;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 140px 8vw;
+  border-top: 1px solid #171717;
+}
+
+.section h2 {
+  max-width: 900px;
+  font-size: clamp(45px, 7vw, 100px);
+  line-height: 0.95;
+  letter-spacing: -5px;
+  margin-bottom: 50px;
+}
+
+.section > p:not(.section-label) {
+  max-width: 700px;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/* PROJECTS */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  min-height: 350px;
+  padding: 30px;
+  border: 1px solid #171717;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  background: #171717;
+  color: #f5f1e8;
+  transform: translateY(-8px);
+}
+
+.project-card span {
+  font-size: 14px;
+}
+
+.project-card h3 {
+  font-size: 30px;
+}
+
+.project-card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CONTACT */
+
+.contact {
+  min-height: 70vh;
+}
+
+.contact h2 {
+  max-width: 1000px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 8vw;
+  border-top: 1px solid #171717;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 5vw;
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: 80px 5vw;
+  }
+
+  .hero h1 {
+    font-size: 23vw;
+    letter-spacing: -5px;
+  }
+
+  .role {
+    font-size: 17px;
+  }
+
+  .section {
+    padding: 90px 5vw;
+  }
+
+  .section h2 {
+    letter-spacing: -3px;
+  }
+
+  .section > p:not(.section-label) {
+    font-size: 18px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 280px;
+  }
+}
+
+.profile-image {
+  width: 230px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 45px;
+  filter: grayscale(100%);
+  align-self: flex-start;
+  border: 1px solid #171717;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 30px;
+}
+
+.contact-links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 72px;
+    line-height: 0.9;
+  }
+
+  .role {
+    font-size: 18px;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .section h2 {
+    font-size: 52px;
+  }
+
+  .contact h2 {
+    font-size: 48px;
+  }
+
+  .contact-links {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
