@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="portfolio">
       <nav>
-        <h2>PANKAJ</h2>
+        <h2>PANKAJ.</h2>
 
         <div className="nav-links">
           <a href="#home">Home</a>
