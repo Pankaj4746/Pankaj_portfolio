@@ -306,6 +306,7 @@ footer {
 
   .profile-image {
     width: 240px;
+    margin-bottom: 18px;
     height: 300px;
     box-shadow: 5px 5px 0 var(--text);
   }
@@ -313,6 +314,11 @@ footer {
   .projects {
     grid-template-columns: 1fr;
   }
+
+  .project-card h3 {
+    font-size: 30px;
+    line-height: 1.1;
+}
 
   .project-card {
     width: 100%;
